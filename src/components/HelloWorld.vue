@@ -32,10 +32,23 @@
 </template>
 
 <script>
+  import {index} from "@/api/index_api";
+
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  created() {
+    index().then(response => {
+      console.log(response)
+    });
+  },
+
+  methods: {
+
   }
 }
 </script>
